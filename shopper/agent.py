@@ -89,6 +89,13 @@ def _build_task(
     )
     lines.append("")
     lines.append(
+        "If a popup or modal appears inside a cross-origin iframe (e.g. email signup, "
+        "discount offers from Attentive/Klaviyo), coordinate-click the X button to "
+        "dismiss it immediately. Do NOT waste steps on index clicks, JS injection, or "
+        "Escape for iframe popups."
+    )
+    lines.append("")
+    lines.append(
         "Do NOT proceed to checkout or enter any payment information. Stop after adding to cart."
     )
 
