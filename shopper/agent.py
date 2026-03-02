@@ -84,8 +84,22 @@ def _build_task(
 
     lines.append(f"{step}. Click 'Add to Cart' (or equivalent button).")
     step += 1
+    lines.append(f"{step}. Proceed to checkout.")
+    step += 1
     lines.append(
-        f"{step}. Confirm the item is in the cart and report back what was added, the size, color, and price."
+        f"{step}. Fill in shipping information using: "
+        "SHIPPING_FIRST_NAME, SHIPPING_LAST_NAME, SHIPPING_ADDRESS, "
+        "SHIPPING_CITY, SHIPPING_STATE, SHIPPING_ZIP, SHIPPING_PHONE, SHIPPING_EMAIL."
+    )
+    step += 1
+    lines.append(
+        f"{step}. Fill in payment information using: "
+        "CARD_NUMBER, CARD_EXP, CARD_CVV, CARD_NAME."
+    )
+    step += 1
+    lines.append(
+        f"{step}. STOP before placing the order. Report back the order summary "
+        "including item, size, color, price, and total."
     )
     lines.append("")
     lines.append(
@@ -95,9 +109,7 @@ def _build_task(
         "Escape for iframe popups."
     )
     lines.append("")
-    lines.append(
-        "Do NOT proceed to checkout or enter any payment information. Stop after adding to cart."
-    )
+    lines.append("Do NOT click 'Place Order' or any final submit button.")
 
     return "\n".join(lines)
 
