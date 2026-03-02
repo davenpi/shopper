@@ -29,4 +29,4 @@ The browser-use agent cannot reliably dismiss these popups because:
 
 ## Impact
 
-This is not a model intelligence problem — no model can close a cross-origin iframe popup with the current tool setup. It affects any site using third-party marketing overlays, which is a large percentage of e-commerce sites.
+This is partly a platform limitation (no DOM indices for cross-origin iframe content) and partly a model intelligence problem. Coordinate-based clicking is available as a tool, and the X button is clearly visible in the screenshot — the models just can't reliably map what they see to accurate pixel coordinates. A model with better vision-to-coordinate reasoning could solve this without any platform changes. Affects any site using third-party marketing overlays, which is a large percentage of e-commerce sites.
