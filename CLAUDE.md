@@ -1,0 +1,4 @@
+- Use conventional commits
+- NumPy style docstrings
+- Write class based tests using pytest when you add new features
+- No Co-Authored by on commits and PRs
