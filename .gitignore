@@ -17,3 +17,6 @@ wheels/
 
 # Internal notes
 issues/
+
+# Logs
+logs/
